@@ -1,0 +1,37 @@
+% Copyright 2011 by Keck-Voon LING
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+
+% A stripped-down theme for beamer, for an "imperfect" clone of the NTU PowerPoint template
+% 
+% Usage:
+%
+% \documentclass{beamer}
+%
+% \usetheme{NTU}
+% ... ...
+% 
+% Keck-Voon LING <ekvling@ntu.edu.sg>
+
+
+% Revision history:
+% v1.0: 2010/01/24, Initial creation
+
+
+\ProvidesPackage{beamerthemeNTU}[2011/01/24 v1.0 for beamer 2007/03/11 cvs version 3.07]
+
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\setbeamertemplate{background canvas}{\includegraphics
+	[width=\paperwidth,height=\paperheight]{NTUtemplate.jpg}}
+
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{footline}[frame number]
+
+\mode<all>

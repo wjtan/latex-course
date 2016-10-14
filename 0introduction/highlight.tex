@@ -1,0 +1,43 @@
+\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+
+\lstdefinelanguage{BibTeX}
+  {keywords={%
+      @article,@book,@collectedbook,@conference,@electronic,@ieeetranbstctl,%
+      @inbook,@incollectedbook,@incollection,@injournal,@inproceedings,%
+      @manual,@mastersthesis,@misc,@patent,@periodical,@phdthesis,@preamble,%
+      @proceedings,@standard,@string,@techreport,@unpublished%
+      },
+   comment=[l][\itshape]{@comment},
+   sensitive=false,
+}
+
+%\lstset{frame=single,
+%        basicstyle=\ttfamily,
+%        %identifierstyle=\color{blue}\ttfamily,
+%        keywordstyle=\color{red}\ttfamily,
+%        stringstyle=\color{black}\ttfamily,
+%        commentstyle=\color{green}\ttfamily}
+
+\lstdefinelanguage{MyLaTeX}
+{
+language=[LaTeX]TeX,
+moretexcs={cmdname, subsection,citep,eqref,includegraphics,maketitle,tableofcontents,listoffigures,listoftables},
+morekeywords={abstract,article,document,verbatim,equation,figure,table,tabular,envname},
+otherkeywords={$, \{, \}, \[, \], \|, \|, \#,-,+,=},
+%literate={+}{{{\color{red}+}}}2 {-}{{{\color{red}-{}}}}2 {=}{{{\color{red}=}}}1
+}
+
+\lstset{language=MyLaTeX,
+frame=single,
+texcsstyle=*\bf\color{blue},
+numbers=none,
+breaklines=true,
+basicstyle=\small,
+keywordstyle=[1]\bf\color{darkgreen},
+%identifierstyle=\textsf,
+commentstyle=\color{red},
+tabsize=2,
+%backgroundcolor=\color{lightgrey}
+%breakautoindent=false,
+}

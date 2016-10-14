@@ -1,0 +1,161 @@
+\section{Typesetting Text}
+
+\begin{frame}[fragile]{Verbatim Text}
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
+\begin{verbatim}
+"I'm tired of escaping characters!"
+Type all the special characters you want, 100%!
+No need to escape your # and $ and ^ here,
+and it respects your line breaks
+and   whitespaces,   too!
+\end{verbatim}
+
+Inline: \verb|mem_buffer|.
+\end{lstlisting}
+
+\begin{center}
+\small
+\minipage{.5\linewidth}
+\begin{verbatim}
+"I'm tired of escaping characters!"
+Type all the special characters you want, 100%!
+No need to escape your # and $ and ^ here,
+and it respects your line breaks
+and   whitespaces,   too!
+\end{verbatim}
+
+Inline: \verb|mem_buffer|.
+
+\endminipage
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Font Families and Effects}
+  \begin{center}
+    \begin{tabular}{ll}
+\hline
+\lstinline|\textrm{roman}| & \textrm{roman} \\
+\lstinline|\textsf{sans serif}| & \textsf{sans serif} \\
+\lstinline|\texttt{typewriter}| & \texttt{typewriter} \\
+\hline
+\lstinline|\textbf{bold}| & \textbf{bold} \\
+\lstinline|\textit{italics}| & \textit{italics} \\
+\lstinline|\underline{underline}| & \underline{underline} \\
+\lstinline|\textsc{Small Caps}| & \textsc{Small Caps} \\
+\lstinline|\emph{emphasis}| & \emph{emphasis} \\
+\hline
+    \end{tabular}
+  \end{center}
+  
+\begin{itemize}
+\item Commands can be nested:
+
+\lstinline|\texttt{\emph{Like this.}}| $\rightarrow$  \texttt{\emph{Like this.}}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Font Sizes}
+Font size changing commands relative to base font size given in
+\texttt{documentclass} option
+  
+\begin{center}
+\begin{tabular}{ll}
+\hline
+\lstinline|{\tiny Text}| & {\tiny Text} \\
+\lstinline|{\scriptsize Text}| & {\scriptsize Text} \\
+\lstinline|{\footnotesize Text}| & {\footnotesize Text} \\
+\lstinline|{\small Text}| & {\small Text} \\
+\lstinline|{\normalsize Text}| & {\normalsize Text} \\
+\lstinline|{\large Text}| & {\large Text} \\
+\lstinline|{\Large Text}| & {\Large Text} \\
+\lstinline|{\LARGE Text}| & {\LARGE Text} \\
+\lstinline|{\huge Text}| & {\huge Text} \\
+\lstinline|{\Huge Text}| & {\Huge Text} \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+
+
+\section{Structure}
+\begin{frame}[fragile]{Other Structures}
+\begin{itemize}
+  \item Author information (in preamble)
+  \begin{itemize}
+  \item \lstinline|\author|: Name(s) of authors
+  \item \lstinline|\title|: Title of the article/book/report
+  \item \lstinline|\date|: Specify a date
+  \item Other custom fields for respective journals, conference styles
+  (refer to publisher's instructions and templates)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Other Structures (Cont.)}
+\begin{itemize}
+\item Routine tasks (in document body)
+\begin{itemize}
+\item Abstract:
+\begin{lstlisting}
+\begin{abstract}
+My text here.
+\end{abstract}
+\end{lstlisting}
+
+\item Footnote: \lstinline|\footnote{Some notes}|
+\item Margin notes: \lstinline|\marginpar{In the margin}|
+\item Auto-generate title: \lstinline|\maketitle|
+%\item Auto-generate TOC: \lstinline|\tableofcontents|
+%(\lstinline|\listoffigures|,\lstinline|\listoftables| -- we'll try later)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{PDF Hyperlinks and Bookmarks}
+  \begin{itemize}
+    \item \lstinline|\usepackage{hyperref}| in preamble
+    \item But load it as last package!
+    \item Coloured borders around links in PDF will not show up when printed.
+  \end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Citations and References}
+\begin{frame}[fragile]{natbib: Flexible Citations}
+  \begin{itemize}
+    \item \lstinline|\usepackage{natbib}|\\
+    ~
+%    \begin{description}
+%    \item[authoryear] for author-year citations
+%    \item[numbers] for numerical citations
+%    \item[super] superscripts for numerical citations, as in Nature
+%    \item[sort] orders multiple citations according to the list of references
+%    \item[sort\&compress] same as sort but multiple numerical citations are compressed if possible
+%    \item[compress] compress without sorting 
+%    \end{description}
+     \item natbib citation commands:
+     \begin{itemize}
+     \item \lstinline|\cite{knuth:1984}| $\rightarrow$ Knuth (1984)
+     \item \lstinline|\citep{knuth:1984}| $\rightarrow$ (Knuth, 1984)
+     \end{itemize}
+     
+%     \item \lstinline|\usepackage[numbers]{natbib}|
+%     \begin{itemize}
+%       \item \lstinline|\cite{knuth:1984}| $\rightarrow$ [1]
+%     \end{itemize}
+  \end{itemize}
+\end{frame}
