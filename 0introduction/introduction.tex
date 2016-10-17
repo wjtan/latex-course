@@ -53,7 +53,7 @@
 
 \begin{frame}[fragile]{How does it work?}
   \begin{itemize}
-    \item \LaTeX{} is a document preparation system for the \TeX{} typesetting program.
+    \item \LaTeX{} is a document preparation system for the \TeX{}  typesetting program.
     
     \item You write your document in plain text with \emph{commands} that describe its structure and meaning.
     
@@ -178,7 +178,7 @@ environment contents
 \item Comments: the \% character.
 \begin{lstlisting}
 % You won't see this line in the output.
-You will see this line %<- nothing here!
+You will see this line % nothing here!
 \end{lstlisting}
 
 \end{itemize}
@@ -219,25 +219,25 @@ Hello World!
 
 \section{Typesetting Text}
 
-\begin{frame}{Whitespace and New Lines}
+\begin{frame}[fragile]{Whitespace and New Lines}
   \begin{itemize}
     \item Space and tab characters
     \begin{itemize}
       \item White space does not (usually) matter
-      \item \TeX determines inter-word spacing to ensure legibility
+      \item \TeX{} determines inter-word spacing to ensure legibility
     \end{itemize}
     ~
     \item Paragraph breaking
     \begin{itemize}
       \item Leave a blank line between text to break paragraph
       \item Multiple blank lines won't give more vertical spacing
-      \item \TeX determines inter-line spacing to ensure legibility
+      \item \TeX{} determines inter-line spacing to ensure legibility
     \end{itemize}
     ~
     \item Manual line- and page-breaking?
     \begin{itemize}
       \item TEX decides where to break lines, pages to ensure legibility
-      \item if you insist: \textbackslash\textbackslash, \textbackslash pagebreak
+      \item if you insist: \lstinline|\\|, \lstinline|\pagebreak|
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -524,8 +524,8 @@ and let $c = a - b + 1$
 
 \begin{tabular}{|l|l|}
 \hline
-\lstinline|$F_n = F_n-1 + F_n-2$| & $F_n = F_n-1 + F_n-2$ \\
-\lstinline|$F_n = F_{n-1} + F_{n-2}$| & $F_n = F_{n-1} + F_{n-2}$ \\
+\lstinline|$F_n = F_n - 1 + F_n - 2$| & $F_n = F_n-1 + F_n-2$ \\
+\lstinline|$F_n = F_{n - 1} + F_{n - 2}$| & $F_n = F_{n-1} + F_{n-2}$ \\
 \hline
 \end{tabular}\\
 ~
@@ -611,9 +611,9 @@ publisher = {Oxford University Press}
 \begin{lstlisting}
 \documentclass{article}
 \begin{document}
-\cite{latex:companion} is a useful book. Knuth introduced the literate programming paradigm while developing \TeX{}\ \cite{knuth:1984}.
+\cite{latex:companion} is a useful book. Knuth introduced the literate programming paradigm while developing \TeX \cite{knuth:1984}.
 \bibliographystyle{plain}
-\bibliography{latex-related}
+\bibliography{ref}
 \end{document}
 \end{lstlisting}
 \end{frame}
@@ -721,14 +721,6 @@ Figure \ref{fig:chick} depicts a chick.
 \end{center}
 \end{frame}
 
-\begin{frame}{Tabular (Cont.)}
-\begin{itemize}
-  \item Alternatively, let someone else generate the table for you
-  \url{http://www.tablesgenerator.com/}
-\end{itemize}
- 
-\end{frame}
-
 \begin{frame}[fragile]{Tables}
 \begin{lstlisting}
 \begin{table}
@@ -757,6 +749,14 @@ Table \ref{tab:sample} is a very simple example.
 
 \end{frame}
 
+\begin{frame}{Tables (Cont.)}
+\begin{itemize}
+  \item Alternatively, let someone else generate the table for you
+  \url{http://www.tablesgenerator.com/}
+\end{itemize}
+ 
+\end{frame}
+
 \section*{Misc.}
 
 %\begin{frame}{Additional Resources}
@@ -773,7 +773,7 @@ Table \ref{tab:sample} is a very simple example.
 %    \item \LaTeX~Community -- large online forum
 %    \url{http://www.latex-community.org/forum/}
 %    
-%    \item Comprehensive \TeX{} Archive Network (CTAN) -- over 4000 packages plus documentations.
+%    \item Comprehensive \TeX{}  Archive Network (CTAN) -- over 4000 packages plus documentations.
 %    \url{http://ctan.org/}
 %    
 %    \item ShareLaTeX guides 
@@ -810,7 +810,7 @@ Table \ref{tab:sample} is a very simple example.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \begin{center}
-Thanks, and happy \TeX{}ing!
+Thanks, and happy \TeX{} ing!
 \end{center}
 \end{frame}
 
